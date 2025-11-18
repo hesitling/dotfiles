@@ -1,3 +1,6 @@
 [submodule ".config/mpv/repos/mpv-manga-reader"]
 	path = .config/mpv/repos/mpv-manga-reader
 	url = https://github.com/Dudemanguy/mpv-manga-reader.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:florious0721/neovim-config.git
