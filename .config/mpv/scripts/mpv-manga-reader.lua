@@ -1,0 +1,1 @@
+../repos/mpv-manga-reader/manga-reader.lua
