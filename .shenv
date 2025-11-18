@@ -1,0 +1,64 @@
+#!/bin/bash
+
+append_path () {
+    case ":$PATH:" in
+        *:"$1":*)
+            ;;
+        *)
+            PATH="${PATH:+$PATH:}$1"
+    esac
+}
+
+export EDITOR='nvim' #@reference_tag(editor)
+export DMENU='fzf' #@reference_tag(dmenu)
+export DMENU_GUI='fuzzeld.sh' #@reference_tag(dmenu_gui)
+export LANG='en_US.UTF-8'
+export LESSHISTSIZE=0
+export LESSHISTFILE=/dev/null
+export MANPAGER='nvim +Man!'
+
+export XDG_CACHE_HOME="${HOME}/.cache" #@reference_tag(xdg_dir)
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_STATE_HOME="${HOME}/.local/state"
+export XKB_DEFAULT_LAYOUT='cn'
+#export XKB_DEFAULT_VARIANT=''
+
+export XCURSOR_PATH="${XCURSOR_PATH}:/usr/share/icons:${HOME}/.icons:${XDG_DATA_HOME}/icons"
+export XCURSUR_SIZE='28'
+export XCURSOR_THEME='GoogleDot-White' #@reference_tag(cursor_theme)
+
+export PASSWORD_STORE_CLIP_TIME=15 #@reference_tag(pass)
+export PASSWORD_STORE_GENERATED_LENGTH=32
+
+export NPM_PACKAGES="${HOME}/.npm/data" #@reference_tag(npm_path)
+export NODE_PATH="${NPM_PACKAGES}/lib/node_modules/:${NODE_PATH}"
+
+export PYTHONUSERBASE="${HOME}/.python"
+
+#export UNCRUSTIFY_CONFIG="${XDG_CONFIG_HOME}/uncrustify/config"
+
+export CMAKE_COLOR_DIAGNOSTICS=1
+export CMAKE_EXPORT_COMPILE_COMMANDS=1
+export CMAKE_GENERATOR=Ninja
+
+export XMAKE_GLOBALDIR="${HOME}/.config/xmake"
+export XMAKE_RCFILES="${XMAKE_GLOBALDIR}/xmakerc.lua"
+
+export CPKG_PREFIX="${XDG_DATA_HOME}/cpkg"
+CMAKE_PREFIX_PATH+=":${CPKG_PREFIX}"
+C_INCLUDE_PATH+=":${CPKG_PREFIX}/include"
+CPLUS_INCLUDE_PATH+=":${CPKG_PREFIX}/include"
+OBJC_INCLUDE_PATH+=":${CPKG_PREFIX}/include"
+LIBRARY_PATH+=":${CPKG_PREFIX}/lib"
+export CMAKE_PREFIX_PATH
+export C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH
+export OBJC_INCLUDE_PATH
+export LIBRARY_PATH
+
+append_path "${HOME}/.local/bin"
+append_path "${PYTHONUSERBASE}/bin"
+append_path "${BUN_INSTALL}/bin"
+append_path "${NPM_PACKAGES}/bin"
+append_path "${CPKG_PREFIX}/bin"
