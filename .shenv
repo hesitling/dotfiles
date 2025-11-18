@@ -17,7 +17,8 @@ export LESSHISTSIZE=0
 export LESSHISTFILE=/dev/null
 export MANPAGER='nvim +Man!'
 
-export XDG_CACHE_HOME="${HOME}/.cache" #@reference_tag(xdg_dir)
+#@reference_tag(xdg_dir)
+export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
@@ -34,16 +35,9 @@ export PASSWORD_STORE_GENERATED_LENGTH=32
 export NPM_PACKAGES="${HOME}/.npm/data" #@reference_tag(npm_path)
 export NODE_PATH="${NPM_PACKAGES}/lib/node_modules/:${NODE_PATH}"
 
-export PYTHONUSERBASE="${HOME}/.python"
-
-#export UNCRUSTIFY_CONFIG="${XDG_CONFIG_HOME}/uncrustify/config"
-
 export CMAKE_COLOR_DIAGNOSTICS=1
 export CMAKE_EXPORT_COMPILE_COMMANDS=1
 export CMAKE_GENERATOR=Ninja
-
-export XMAKE_GLOBALDIR="${HOME}/.config/xmake"
-export XMAKE_RCFILES="${XMAKE_GLOBALDIR}/xmakerc.lua"
 
 export CPKG_PREFIX="${XDG_DATA_HOME}/cpkg"
 CMAKE_PREFIX_PATH+=":${CPKG_PREFIX}"

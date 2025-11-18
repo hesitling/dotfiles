@@ -14,14 +14,13 @@ alias nv='nvim'
 alias para='parallel-moreutils'
 alias psu='ps -u "${USER}"'
 alias randnum='tr -cd "0-9" < /dev/urandom | head -c'
-alias rem='remind -n ~/doc/remind/all.remind' #@reference_tag(reminders)
 alias shred='shred -uz -n3 --random-source=/dev/urandom'
 alias weather='curl wttr.in/ganzhou'
 
 scd() {
     local s=''
     [[ -z "${1}" ]] || s="-maxdepth ${1}"
-    cd "$(find -mindepth 1 $s -type d | "${DMENU}")"
+    cd "$(find -mindepth 1 $s -type d | "${DMENU}")" #@reference_tag(dmenu)
 }
 
 safe() {
