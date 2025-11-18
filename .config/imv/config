@@ -1,0 +1,7 @@
+[options]
+initial_pan = 0 0
+overlay = true
+scaling_mode = crop
+[binds]
+x = prev
+c = next
