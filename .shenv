@@ -39,6 +39,9 @@ export CMAKE_COLOR_DIAGNOSTICS=1
 export CMAKE_EXPORT_COMPILE_COMMANDS=1
 export CMAKE_GENERATOR=Ninja
 
+export DOTNET_HOME="${HOME}/.dotnet"
+export DOTNET_TOOLS="${DOTNET_HOME}/tools"
+
 export CPKG_PREFIX="${XDG_DATA_HOME}/cpkg"
 CMAKE_PREFIX_PATH+=":${CPKG_PREFIX}"
 C_INCLUDE_PATH+=":${CPKG_PREFIX}/include"
@@ -56,3 +59,5 @@ append_path "${PYTHONUSERBASE}/bin"
 append_path "${BUN_INSTALL}/bin"
 append_path "${NPM_PACKAGES}/bin"
 append_path "${CPKG_PREFIX}/bin"
+append_path "${DOTNET_TOOLS}"
+append_path "$(go env GOPATH)/bin"
