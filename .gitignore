@@ -1,13 +1,17 @@
 .Xauthority
+.android
 .cache
 .dotnet
 .gnupg
+.go
 .histfile
 .node_repl_history
 .npm
+.nuget
 .password-store
 .pki
 .python_history
+.sqlite_history
 .ssh
 .templateengine
 .texlive

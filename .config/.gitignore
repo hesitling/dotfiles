@@ -15,6 +15,7 @@ fcitx5/conf/clipboard.conf
 fcitx5/conf/notifications.conf
 fcitx5/conf/quickphrase.conf
 fcitx5/conf/spell.conf
+github-copilot/
 go/telemetry
 godot/
 gtk-3.0/bookmarks
