@@ -54,10 +54,23 @@ export CPLUS_INCLUDE_PATH
 export OBJC_INCLUDE_PATH
 export LIBRARY_PATH
 
+export PNPM_HOME='/dat/var/pnpm'
+
+UV_HOME='/dat/var/uv'
+export UV_CACHE_DIR="${UV_HOME}/cache"
+export UV_PYTHON_DIR="${UV_HOME}/python"
+export UV_TOOL_DIR="${UV_HOME}/tool"
+
+export OPENCODE_DISABLE_LSP_DOWNLOAD='true'
+
+export GOPATH='/dat/var/go'
+
 append_path "${HOME}/.local/bin"
 append_path "${PYTHONUSERBASE}/bin"
 append_path "${BUN_INSTALL}/bin"
 append_path "${NPM_PACKAGES}/bin"
 append_path "${CPKG_PREFIX}/bin"
 append_path "${DOTNET_TOOLS}"
-append_path "$(go env GOPATH)/bin"
+append_path "${PNPM_HOME}"
+append_path "${PNPM_HOME}/bin"
+append_path "${GOPATH}/bin"
