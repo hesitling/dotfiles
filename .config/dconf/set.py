@@ -18,9 +18,9 @@ dconf_setting = [
             ['font-rendering', 'manual'],
 
             ['gtk-im-module', 'fcitx'],
-            ['gtk-theme', 'Matcha-dark-sea'], #@reference_tag(gtk_theme)
+            ['gtk-theme', 'Breeze-Dark'], #@reference_tag(gtk_theme)
             ['color-scheme', 'prefer-dark'],
-            ['icon-theme', 'Qogir-Dark'], #@reference_tag(icon_theme)
+            ['icon-theme', 'Breeze'], #@reference_tag(icon_theme)
         ],
     }
 ]

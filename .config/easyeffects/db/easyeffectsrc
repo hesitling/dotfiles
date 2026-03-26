@@ -18,10 +18,10 @@ visiblePage=pluginsPage
 visiblePlugin=equalizer#0
 
 [Style]
-forceBreezeTheme=false
+forceBreezeTheme=true
 
 [Window]
-height=472
+height=952
 lastLoadedOutputPreset=fransun
 reducePluginsListControls=true
-width=683
+width=1528
