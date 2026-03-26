@@ -1,0 +1,6 @@
+prefix=/dat/var/pnpm/data
+global-bin-dir=/dat/var/pnpm/bin
+cache-dir=/dat/var/pnpm/cache
+state-dir=/dat/var/pnpm/state
+store-dir=/dat/var/pnpm/store
+registry=https://registry.npmmirror.com
