@@ -41,3 +41,10 @@ load_conf 'bash_completion' '/usr/share/bash-completion/bash_completion'
 set +H -o emacs
 
 export GPG_TTY="$(tty)"
+
+if [[ ! -f ~/TODO.md ]]; then
+echo 'TODO.md not exists! Do you remember what you should do?'
+else
+head --lines=-2 ~/TODO.md
+echo 'Please check and add what you want to do in TODO.md'
+fi
