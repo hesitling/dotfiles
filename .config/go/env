@@ -1,3 +1,5 @@
+
+# TEMPLATE
 GO111MODULE=on
-GOPATH=/dat/var/go
 GOPROXY=https://goproxy.cn,direct
+GOPATH=/home/aaaa/.local/share/go
