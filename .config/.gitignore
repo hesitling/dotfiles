@@ -1,5 +1,6 @@
 Epic/
 GIMP/
+JetBrains/
 Kitware/
 MusicBrainz/
 NecroDancer/
@@ -8,6 +9,10 @@ QQ/
 QtProject/
 QtProject.conf
 
+apifox/
+astro/
+beekeeper-studio/
+create-next-app-nodejs/
 dconf/user
 fcitx/
 fcitx5/conf/cached_layouts
@@ -29,6 +34,7 @@ kritarc
 mapeditor.org/
 menus/
 mihomo/
+nextjs-nodejs/
 obs-studio/
 procps/
 pulse/

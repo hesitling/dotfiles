@@ -5,6 +5,12 @@ but it's not recommended to use these configs directly since it's very personal 
 
 Mayby I will try to make it better when I have time.
 
+Variable and template
+---------------------
+
+Variables should be managed in ``~/.shenv``.
+Python templates use environment variables in ``~/.shenv``.
+
 How to use
 ----------
 
