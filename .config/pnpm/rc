@@ -1,6 +1,8 @@
-prefix=/dat/var/pnpm/data
-global-bin-dir=/dat/var/pnpm/bin
-cache-dir=/dat/var/pnpm/cache
-state-dir=/dat/var/pnpm/state
-store-dir=/dat/var/pnpm/store
+
+# TEMPLATE
+prefix=/home/aaaa/.local/share/pnpm/data
+global-bin-dir=/home/aaaa/.local/share/pnpm/bin
+cache-dir=/home/aaaa/.local/share/pnpm/cache
+state-dir=/home/aaaa/.local/share/pnpm/state
+store-dir=/home/aaaa/.local/share/pnpm/store
 registry=https://registry.npmmirror.com
