@@ -1,16 +1,16 @@
 #!/bin/bash
 
-append_path () {
-    case ":$PATH:" in
-        *:"$1":*)
-            ;;
-        *)
-            PATH="${PATH:+$PATH:}$1"
-    esac
+append_path() {
+  case ":$PATH:" in
+  *:"$1":*) ;;
+  *)
+    PATH="${PATH:+$PATH:}$1"
+    ;;
+  esac
 }
 
-export EDITOR='nvim' #@reference_tag(editor)
-export DMENU='fzf' #@reference_tag(dmenu)
+export EDITOR='nvim'          #@reference_tag(editor)
+export DMENU='fzf'            #@reference_tag(dmenu)
 export DMENU_GUI='fuzzeld.sh' #@reference_tag(dmenu_gui)
 export LANG='en_US.UTF-8'
 export LESSHISTSIZE=0
@@ -32,8 +32,9 @@ export XCURSOR_THEME='GoogleDot-White' #@reference_tag(cursor_theme)
 export PASSWORD_STORE_CLIP_TIME=15 #@reference_tag(pass)
 export PASSWORD_STORE_GENERATED_LENGTH=32
 
-export NPM_PACKAGES="${HOME}/.npm/data" #@reference_tag(npm_path)
-export NODE_PATH="${NPM_PACKAGES}/lib/node_modules/:${NODE_PATH}"
+export NPM_HOME="${XDG_DATA_HOME}/npm"
+export NPM_PREFIX="${NPM_HOME}/data"
+export NODE_PATH="${NPM_PREFIX}/lib/node_modules/:${NODE_PATH}"
 
 export CMAKE_COLOR_DIAGNOSTICS=1
 export CMAKE_EXPORT_COMPILE_COMMANDS=1
@@ -41,35 +42,26 @@ export CMAKE_GENERATOR=Ninja
 
 export DOTNET_HOME="${HOME}/.dotnet"
 export DOTNET_TOOLS="${DOTNET_HOME}/tools"
+# export NUGET_HOME="${HOME}/.nuget"
 
-export CPKG_PREFIX="${XDG_DATA_HOME}/cpkg"
-CMAKE_PREFIX_PATH+=":${CPKG_PREFIX}"
-C_INCLUDE_PATH+=":${CPKG_PREFIX}/include"
-CPLUS_INCLUDE_PATH+=":${CPKG_PREFIX}/include"
-OBJC_INCLUDE_PATH+=":${CPKG_PREFIX}/include"
-LIBRARY_PATH+=":${CPKG_PREFIX}/lib"
-export CMAKE_PREFIX_PATH
-export C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH
-export OBJC_INCLUDE_PATH
-export LIBRARY_PATH
+export PNPM_HOME="${XDG_DATA_HOME}/pnpm"
 
-export PNPM_HOME='/dat/var/pnpm'
-
-UV_HOME='/dat/var/uv'
-export UV_CACHE_DIR="${UV_HOME}/cache"
+export UV_HOME="${XDG_DATA_HOME}/uv"
+export UV_CACHE_DIR="${XDG_CACHE_HOME}/uv"
 export UV_PYTHON_DIR="${UV_HOME}/python"
 export UV_TOOL_DIR="${UV_HOME}/tool"
 
+export OPENCODE_EXPERIMENTAL_LSP_TOOL='true'
 export OPENCODE_DISABLE_LSP_DOWNLOAD='true'
 
-export GOPATH='/dat/var/go'
+export GOPATH="${XDG_DATA_HOME}/go"
+
+export DOCKER_HOST="unix://${XDG_RUNTIME_DIR}/podman/podman.sock"
 
 append_path "${HOME}/.local/bin"
 append_path "${PYTHONUSERBASE}/bin"
-append_path "${BUN_INSTALL}/bin"
-append_path "${NPM_PACKAGES}/bin"
-append_path "${CPKG_PREFIX}/bin"
+#append_path "${BUN_INSTALL}/bin"
+append_path "${NPM_PREFIX}/bin"
 append_path "${DOTNET_TOOLS}"
 append_path "${PNPM_HOME}"
 append_path "${PNPM_HOME}/bin"
