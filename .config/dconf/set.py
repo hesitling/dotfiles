@@ -1,3 +1,4 @@
+import os
 from subprocess import check_call
 
 dconf_setting = [
@@ -7,8 +8,8 @@ dconf_setting = [
 
             #@reference_tag(cursor_theme)
             ['cursor-blink', 'false'],
-            ['cursor-size', '28'],
-            ['cursor-theme', 'GoogleDot-White'],
+            ['cursor-size', os.environ['XCURSOR_SIZE']],
+            ['cursor-theme', os.environ['XCURSOR_THEME']],
 
             #@reference_tag(font)
             ['font-name', 'system-ui 12'],
@@ -17,10 +18,10 @@ dconf_setting = [
             ['font-hinting', 'slight'],
             ['font-rendering', 'manual'],
 
-            ['gtk-im-module', 'fcitx'],
-            ['gtk-theme', 'Breeze-Dark'], #@reference_tag(gtk_theme)
+            ['gtk-im-module', os.environ['INPUT_METHOD']],
+            ['gtk-theme', os.environ['GTK_THEME']],
             ['color-scheme', 'prefer-dark'],
-            ['icon-theme', 'Breeze'], #@reference_tag(icon_theme)
+            ['icon-theme', os.environ['ICON_THEME']],
         ],
     }
 ]
