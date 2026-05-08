@@ -6,12 +6,10 @@ dconf_setting = [
         'path': 'org.gnome.desktop.interface',
         'kv': [
 
-            #@reference_tag(cursor_theme)
             ['cursor-blink', 'false'],
             ['cursor-size', os.environ['XCURSOR_SIZE']],
             ['cursor-theme', os.environ['XCURSOR_THEME']],
 
-            #@reference_tag(font)
             ['font-name', 'system-ui 12'],
             ['document-font-name', 'serif 13'],
             ['monospace-font-name', 'monospace 13'],

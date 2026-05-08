@@ -19,7 +19,7 @@ alias shred='shred -uz -n3 --random-source=/dev/urandom'
 scd() {
   local s=''
   [[ -z "${1}" ]] || s="-maxdepth ${1}"
-  cd "$(find -mindepth 1 $s -type d | "${DMENU}")" #@reference_tag(dmenu)
+  cd "$(find -mindepth 1 $s -type d | "${DMENU}")"
 }
 
 safe() {

@@ -9,15 +9,14 @@ append_path() {
   esac
 }
 
-export EDITOR='{{ .user.programs.editor }}' #@reference_tag(editor)
-export DMENU='{{ .user.programs.dmenu }}' #@reference_tag(dmenu)
-export DMENU_GUI='{{ .user.programs.dmenuGUI }}' #@reference_tag(dmenu_gui)
+export EDITOR='{{ .user.programs.editor }}'
+export DMENU='{{ .user.programs.dmenu }}'
+export DMENU_GUI='{{ .user.programs.dmenuGUI }}'
 export LANG='en_US.UTF-8'
 export LESSHISTSIZE=0
 export LESSHISTFILE=/dev/null
 export MANPAGER='{{ .user.programs.editor }} +Man!'
 
-#@reference_tag(xdg_dir)
 export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_DATA_HOME="${HOME}/.local/share"
@@ -27,11 +26,11 @@ export XKB_DEFAULT_LAYOUT='cn'
 
 export XCURSOR_PATH="${XCURSOR_PATH}:/usr/share/icons:${HOME}/.icons:${XDG_DATA_HOME}/icons"
 export XCURSOR_SIZE='{{ .user.device.cursorSize }}'
-export XCURSOR_THEME='{{ .user.themes.cursor }}' #@reference_tag(cursor_theme)
+export XCURSOR_THEME='{{ .user.themes.cursor }}'
 export GTK_THEME='{{ .user.themes.gtk }}'
 export ICON_THEME='{{ .user.themes.icon }}'
 
-export PASSWORD_STORE_CLIP_TIME=15 #@reference_tag(pass)
+export PASSWORD_STORE_CLIP_TIME=15
 export PASSWORD_STORE_GENERATED_LENGTH=32
 
 export NPM_HOME="${XDG_DATA_HOME}/npm"

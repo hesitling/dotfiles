@@ -23,9 +23,7 @@ min-split-size=20M
 quiet=false
 rpc-allow-origin-all=true
 rpc-listen-all=true
-#@reference_tag(aria2_rpc)
 rpc-listen-port={{ $aria2.port }}
-#@reference_tag(aria2_rpc)
 rpc-secret={{ $aria2.secret }}
 stderr=true
 summary-interval=60
