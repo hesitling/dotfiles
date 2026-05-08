@@ -35,6 +35,7 @@ user:
     dmenuGUI: fuzzeld.sh
     editor: nvim
     shell: bash
+    terminal: foot
   services:
     aria2:
       host: 127.0.0.1
@@ -42,7 +43,6 @@ user:
     cliProxy:
       host: 127.0.0.1
       port: 2709
-    terminal: foot
   themes:
     cursor: 'GoogleDot-White'
     icon: 'Breeze-Dark'
