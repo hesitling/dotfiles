@@ -1,4 +1,42 @@
 user:
+  colors:
+    terminal:
+      normal:
+        background: '1a1b26'
+        foreground: 'aaffaa'
+        red: 'cd0000'
+        green: '00cd00'
+        yellow: 'cdcd00'
+        blue: '0022cd'
+        magenta: 'cd00cd'
+        cyan: '00cdcd'
+        white: 'ffffff'
+      bright:
+        black: '282828'
+        red: 'ff0000'
+        green: '00ff00'
+        yellow: 'ffff00'
+        blue: '0044ff'
+        magenta: 'ff00ff'
+        cyan: '00ffff'
+        white: 'e5e5e5'
+    theme:
+      usage:
+        background: '1a1b26'
+        foreground: 'ebdbb2'
+        contrastBackground: '282828'
+        panel: '3b4261'
+        surface: '16161e'
+        info: '0c9cf7'
+        warning: 'fadb2f'
+        danger: 'cc241d'
+        overlay: '1b2224'
+      named:
+        purple: 'b16286'
+        orange: 'fe8019'
+        slate: '586e75'
+        blue: '7aa2f7'
+        teal: '2f9b85'
   device:
     cursorSize: 28
     dpi: 258.76

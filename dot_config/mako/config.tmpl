@@ -1,3 +1,6 @@
+{{- $theme := .user.colors.theme }}
+{{- $usage := $theme.usage }}
+{{- $named := $theme.named }}
 # Action
 actions=0
 #on-button-left=invoke-default-action
@@ -7,9 +10,9 @@ actions=0
 #on-touch=none
 
 # Color
-background-color=#1a1b26ff
-text-color=#ebdbb2ff
-#progress-color=source #037336ff
+background-color=#{{ $usage.background }}ff
+text-color=#{{ $usage.foreground }}ff
+#progress-color=source #{{ $named.teal }}ff
 
 # Icon
 icons=0
@@ -44,13 +47,13 @@ default-timeout=2500
 ignore-timeout=0
 
 [urgency=low]
-border-color=#0c9cf7ff
+border-color=#{{ $usage.info }}ff
 
 [urgency=normal]
-border-color=#fadb2fff
+border-color=#{{ $usage.warning }}ff
 
 [urgency=critical]
-border-color=#cc241dff
+border-color=#{{ $usage.danger }}ff
 default-timeout=0
 
 [mode=NoBother]

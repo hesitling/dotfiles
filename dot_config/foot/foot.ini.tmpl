@@ -1,0 +1,59 @@
+{{- $terminal := .user.colors.terminal }}
+[main]
+app-id = foot
+bold-text-in-bright = yes
+dpi-aware = no
+font = monospace:size=14
+locked-title = yes
+login-shell = no
+#resize-delay-ms = 100
+shell = /bin/tmux
+title = Foot
+
+[colors-dark]
+background = {{ $terminal.normal.background }}
+foreground = {{ $terminal.normal.foreground }}
+# Black
+bright0 = {{ $terminal.bright.black }}
+regular0 = {{ $terminal.normal.background }}
+# Red
+bright1 = {{ $terminal.bright.red }}
+regular1 = {{ $terminal.normal.red }}
+# Green
+bright2 = {{ $terminal.bright.green }}
+regular2 = {{ $terminal.normal.green }}
+# Yellow
+bright3 = {{ $terminal.bright.yellow }}
+regular3 = {{ $terminal.normal.yellow }}
+# Blue
+bright4 = {{ $terminal.bright.blue }}
+regular4 = {{ $terminal.normal.blue }}
+# Magenta
+bright5 = {{ $terminal.bright.magenta }}
+regular5 = {{ $terminal.normal.magenta }}
+# Cyan
+bright6 = {{ $terminal.bright.cyan }}
+regular6 = {{ $terminal.normal.cyan }}
+# White
+regular7 = {{ $terminal.bright.white }}
+bright7 = {{ $terminal.normal.white }}
+
+[csd]
+preferred = server
+
+[cursor]
+style = block
+unfocused-style = none
+blink = no
+#underline-thickness = 2px
+
+[mouse]
+hide-when-typing = yes
+
+[scrollback]
+#indicator-format = percentage
+indicator-position = none
+lines = 1024
+multiplier = 5.0
+
+# vim:ft=confini:

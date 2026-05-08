@@ -1,3 +1,6 @@
+{{- $theme := .user.colors.theme }}
+{{- $usage := $theme.usage }}
+{{- $named := $theme.named }}
 [main]
 dpi-aware = auto
 exit-on-keyboard-focus-loss = no
@@ -18,15 +21,15 @@ width = 1
 radius = 0
 
 [colors]
-background = 1a1b26ff
-border = b16286ff
-match = fe8019ff
-text = ebdbb2ff
-prompt = 586e75ff
-input = ebdbb2ff
-selection = ebdbb2ff
-selection-match = fe8019ff
-selection-text = 282828ff
+background = {{ $usage.background }}ff
+border = {{ $named.purple }}ff
+match = {{ $named.orange }}ff
+text = {{ $usage.foreground }}ff
+prompt = {{ $named.slate }}ff
+input = {{ $usage.foreground }}ff
+selection = {{ $usage.foreground }}ff
+selection-match = {{ $named.orange }}ff
+selection-text = {{ $usage.contrastBackground }}ff
 
 [dmenu]
 mode = text

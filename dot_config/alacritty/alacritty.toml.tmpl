@@ -1,3 +1,4 @@
+{{- $terminal := .user.colors.terminal }}
 [general]
 live_config_reload = false
 ipc_socket = false
@@ -19,26 +20,26 @@ size = 14
 [colors]
 draw_bold_text_with_bright_colors = true
 [colors.primary]
-background = '#1a1b26'
-foreground = '#aaffaa'
+background = '#{{ $terminal.normal.background }}'
+foreground = '#{{ $terminal.normal.foreground }}'
 [colors.normal]
-black = '#1a1b26'
-red = '#cd0000'
-green = '#00cd00'
-yellow = '#cdcd00'
-blue = '#0022cd'
-magenta = '#cd00cd'
-cyan = '#00cdcd'
-white = '#ffffff'
+black = '#{{ $terminal.normal.background }}'
+red = '#{{ $terminal.normal.red }}'
+green = '#{{ $terminal.normal.green }}'
+yellow = '#{{ $terminal.normal.yellow }}'
+blue = '#{{ $terminal.normal.blue }}'
+magenta = '#{{ $terminal.normal.magenta }}'
+cyan = '#{{ $terminal.normal.cyan }}'
+white = '#{{ $terminal.normal.white }}'
 [colors.bright]
-black = '#282828'
-red = '#ff0000'
-green = '#00ff00'
-yellow = '#ffff00'
-blue = '#0044ff'
-magenta = '#ff00ff'
-cyan = '#00ffff'
-white = '#e5e5e5'
+black = '#{{ $terminal.bright.black }}'
+red = '#{{ $terminal.bright.red }}'
+green = '#{{ $terminal.bright.green }}'
+yellow = '#{{ $terminal.bright.yellow }}'
+blue = '#{{ $terminal.bright.blue }}'
+magenta = '#{{ $terminal.bright.magenta }}'
+cyan = '#{{ $terminal.bright.cyan }}'
+white = '#{{ $terminal.bright.white }}'
 
 [cursor]
 #style = {shape = 'Block', blinking = 'Off'}

@@ -1,3 +1,6 @@
+{{- $theme := .user.colors.theme }}
+{{- $usage := $theme.usage }}
+{{- $named := $theme.named }}
 set -gs editor "${EDITOR}"
 set -as terminal-features ',foot*:RGB:Tc,alacritty*:RGB:Tc'
 #set -as terminal-overrides ',foot*:RGB:Tc,alacritty*:RGB:Tc'
@@ -9,17 +12,17 @@ set -g history-limit 4096
 set -g mode-keys vi
 set -g mouse on
 
-set -g message-style 'fg=#7aa2f7,bg=#3b4261'
-set -g message-command-style 'fg=#7aa2f7,bg=#3b4261'
+set -g message-style 'fg=#{{ $named.blue }},bg=#{{ $usage.panel }}'
+set -g message-command-style 'fg=#{{ $named.blue }},bg=#{{ $usage.panel }}'
 set -g status 'on'
 set -g status-left '[#S]'
 set -g status-right '%Y-%m-%d %H:%M:%S'
 set -g status-justify 'left'
-set -g status-style 'fg=#7aa2f7,bg=#16161e'
+set -g status-style 'fg=#{{ $named.blue }},bg=#{{ $usage.surface }}'
 
-set -gw mode-style 'fg=#7aa2f7,bg=#3b4261'
-set -gw pane-border-style 'fg=#3b4261'
-set -gw pane-active-border-style 'fg=#7aa2f7'
+set -gw mode-style 'fg=#{{ $named.blue }},bg=#{{ $usage.panel }}'
+set -gw pane-border-style 'fg=#{{ $usage.panel }}'
+set -gw pane-active-border-style 'fg=#{{ $named.blue }}'
 set -gw window-status-current-format '[#F#I:#W]'
 set -gw window-status-format '[#F#I:#W]'
 set -gw window-status-current-style 'underscore'

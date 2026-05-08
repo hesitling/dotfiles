@@ -1,7 +1,10 @@
+{{- $theme := .user.colors.theme }}
+{{- $usage := $theme.usage }}
+{{- $named := $theme.named }}
 anchor = bottom right
 timeout = 1000
 
 [style.volume]
-background_color = 1b2224
-bar_color = 2f9b85
-border_color = 2f9b85
+background_color = {{ $usage.overlay }}
+bar_color = {{ $named.teal }}
+border_color = {{ $named.teal }}
