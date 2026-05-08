@@ -6,7 +6,6 @@ export LD_LIBRARY_PATH
 alias cz='chezmoi'
 alias diffu='diff --color=auto -U3'
 alias duu='du -hd 1'
-alias fork='foot -D "$(pwd)" 1>&2 2>/dev/null &' #@reference_tag(terminal)
 alias grepu='grep -inrI --color=auto'
 alias ls='ls --color=auto'
 alias lh='ls -ahlpQ --color=auto'
@@ -16,7 +15,6 @@ alias para='parallel-moreutils'
 alias psu='ps -u "${USER}"'
 alias randnum='tr -cd "0-9" < /dev/urandom | head -c'
 alias shred='shred -uz -n3 --random-source=/dev/urandom'
-alias weather='curl wttr.in/ganzhou'
 
 scd() {
   local s=''
