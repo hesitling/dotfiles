@@ -1,0 +1,42 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "AGENTS.md",
+    "AGENTS.local.md"
+  ],
+  "autoupdate": false,
+  "permission": {
+    "*": "ask",
+    "read": "allow",
+    "skill": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "lsp": "allow"
+  },
+  "mcp": {
+    "deepwiki": {
+      "type": "remote",
+      "url": "https://mcp.deepwiki.com/mcp"
+    }
+  },
+  "provider": {
+    "cpa": {
+      "name": "CLI Proxy API",
+      "npm": "@ai-sdk/openai",
+      "options": {
+        "baseURL": "http://127.0.0.1:2709/v1",
+        "compatibility": "openai-responses",
+        "omitMaxOutputTokens": true
+      },
+      "models": {
+        "gpt-5": {},
+        "gpt-5.2": {},
+        "gpt-5.3-codex": {},
+        "gpt-5.3-codex-openai-compact": {},
+        "gpt-5.3-codex-spark": {},
+        "gpt-5.4": {},
+        "gpt-5.4-mini": {}
+      }
+    }
+  },
+}

@@ -1,0 +1,16 @@
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+approvals_reviewer = "user"
+
+model_provider = "cpa"
+[model_providers.cpa]
+name = "cpa"
+base_url = "http://localhost:2709/v1"
+wire_api = "responses"
+
+[env]
+RUST_LOG = "error"
+
+[mcp_servers.deepwiki]
+url = "https://mcp.deepwiki.com/mcp"

@@ -1,0 +1,52 @@
+user:
+  fonts:
+    sans:
+      - 'Noto Sans'
+      - 'Noto Sans CJK SC'
+      - 'Noto Sans CJK TC'
+      - 'Noto Sans CJK HK'
+      - 'Noto Sans CJK JP'
+      - 'Noto Sans CJK KR'
+    serif:
+      - 'Noto Serif'
+      - 'Noto Serif CJK SC'
+      - 'Noto Serif CJK TC'
+      - 'Noto Serif CJK HK'
+      - 'Noto Serif CJK JP'
+      - 'Noto Serif CJK KR'
+    monospace:
+      - 'Inconsolata'
+      - 'Noto Sans Mono CJK SC'
+      - 'Noto Sans Mono CJK TC'
+      - 'Noto Sans Mono CJK HK'
+      - 'Noto Sans Mono CJK JP'
+      - 'Noto Sans Mono CJK KR'
+    emoji:
+      - 'Symbols Nerd Font'
+      - 'Noto Sans Symbols'
+    symbols:
+      - 'Symbols Nerd Font'
+      - 'Noto Sans Symbols'
+  ports:
+    aria2: 2701
+    CLIProxyAPI: 2709
+  programs:
+    dmenu: fzf
+    dmenuGUI: fuzzeld.sh
+    editor: nvim
+    shell: bash
+    terminal: foot
+  themes:
+    cursor: 'GoogleDot-White'
+    icon: 'Breeze'
+    gtk: 'Breeze-Dark'
+    # for qt use qt6ct
+  xdgDirs:
+    documents: doc
+    download: dl
+    music: audio
+    pictures: pic
+    publicshare: work
+    videos: video
+    desktop: work
+    templates: work

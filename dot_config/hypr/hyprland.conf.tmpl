@@ -1,0 +1,17 @@
+source = deco.conf
+source = behav.conf
+source = input.conf
+source = render.conf
+source = bind.conf
+bind = SUPER&ALT, Z, exit
+bind = SUPER, Return, exec, foot
+animations {
+    enabled = false
+}
+misc {
+    exit_window_retains_fullscreen = true
+    force_default_wallpaper = 0
+    on_focus_under_fullscreen = 1
+}
+exec-once = wayinit.sh
+exec-shutdown = wayterm.sh

@@ -1,0 +1,7 @@
+[Default Applications]
+inode/directory=dir.desktop
+text/html=thorium.desktop
+x-scheme-handler/http=thorium.desktop
+x-scheme-handler/https=thorium.desktop
+x-scheme-handler/about=thorium.desktop
+x-scheme-handler/unknown=thorium.desktop

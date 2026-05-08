@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit Rules"
+  short_description: "Keep commits conventional and focused"
+  default_prompt: "Use $commit-rules to prepare clean conventional commits."
