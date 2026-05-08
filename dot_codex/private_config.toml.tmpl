@@ -1,3 +1,4 @@
+{{- $cliProxy := .user.services.cliProxy }}
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
 
@@ -6,7 +7,7 @@ approvals_reviewer = "user"
 model_provider = "cpa"
 [model_providers.cpa]
 name = "cpa"
-base_url = "http://{{ .user.services.cliProxy.host }}:{{ .user.services.cliProxy.port }}/v1"
+base_url = "http://{{ $cliProxy.host }}:{{ $cliProxy.port }}/v1"
 wire_api = "responses"
 
 [env]

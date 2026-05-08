@@ -1,3 +1,4 @@
+{{- $cliProxy := .user.services.cliProxy -}}
 {
   "$schema": "https://opencode.ai/config.json",
   "instructions": [
@@ -24,7 +25,7 @@
       "name": "CLI Proxy API",
       "npm": "@ai-sdk/openai",
       "options": {
-        "baseURL": "http://{{ .user.services.cliProxy.host }}:{{ .user.services.cliProxy.port }}/v1",
+        "baseURL": "http://{{ $cliProxy.host }}:{{ $cliProxy.port }}/v1",
         "compatibility": "openai-responses",
         "omitMaxOutputTokens": true
       },

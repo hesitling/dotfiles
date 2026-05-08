@@ -1,4 +1,5 @@
 # Repository Notes
 
-- Keep all shared chezmoi data variables nested under `user` in `.chezmoidata.yml`.
-- Service configuration should use `user.services.<service>.host` and `user.services.<service>.port`.
+- Keep user-level non-secret chezmoi variables in `.chezmoidata/user.yml`, nested under `user`.
+- Keep secrets in `.chezmoidata/secrets.yml`.
+- Service configuration should use unified keys under `user.services.<service>.*`.

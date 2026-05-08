@@ -1,3 +1,4 @@
+{{- $aria2 := .user.services.aria2 }}
 allow-overwrite=true
 always-resume=false
 async-dns=false
@@ -23,15 +24,9 @@ quiet=false
 rpc-allow-origin-all=true
 rpc-listen-all=true
 #@reference_tag(aria2_rpc)
-rpc-listen-port={{ .user.services.aria2.port }}
-{{- $aria2RPCSecret := env "CHEZMOI_ARIA2_RPC_SECRET" }}
-{{- if $aria2RPCSecret }}
+rpc-listen-port={{ $aria2.port }}
 #@reference_tag(aria2_rpc)
-rpc-secret={{ $aria2RPCSecret }}
-{{- else }}
-#@reference_tag(aria2_rpc)
-# rpc-secret is set from CHEZMOI_ARIA2_RPC_SECRET during `chezmoi apply`
-{{- end }}
+rpc-secret={{ $aria2.secret }}
 stderr=true
 summary-interval=60
 
