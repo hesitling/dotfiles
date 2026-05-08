@@ -24,7 +24,7 @@
       "name": "CLI Proxy API",
       "npm": "@ai-sdk/openai",
       "options": {
-        "baseURL": "http://127.0.0.1:2709/v1",
+        "baseURL": "http://{{ .user.services.cliProxy.host }}:{{ .user.services.cliProxy.port }}/v1",
         "compatibility": "openai-responses",
         "omitMaxOutputTokens": true
       },

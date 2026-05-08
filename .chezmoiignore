@@ -24,8 +24,10 @@ pic/
 video/
 work/
 
-.codex/
+.codex/*
+!.codex/
 !.codex/config.toml
+!.codex/skillhub/
 !.codex/skillhub/**
 
 .config/GIMP/
@@ -34,7 +36,7 @@ work/
 .config/apifox/
 .config/astro/
 .config/beekeeper-studio/
-.config/chezmoi/
+.config/chezmoi/chezmoistate.boltdb
 .config/create-next-app-nodejs/
 .config/dconf/user
 .config/fcitx/

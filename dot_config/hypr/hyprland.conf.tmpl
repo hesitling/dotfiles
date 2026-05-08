@@ -4,7 +4,7 @@ source = input.conf
 source = render.conf
 source = bind.conf
 bind = SUPER&ALT, Z, exit
-bind = SUPER, Return, exec, foot
+bind = SUPER, Return, exec, {{ .user.programs.terminal }}
 animations {
     enabled = false
 }

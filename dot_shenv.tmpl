@@ -9,13 +9,13 @@ append_path() {
   esac
 }
 
-export EDITOR='nvim'          #@reference_tag(editor)
-export DMENU='fzf'            #@reference_tag(dmenu)
-export DMENU_GUI='fuzzeld.sh' #@reference_tag(dmenu_gui)
+export EDITOR='{{ .user.programs.editor }}' #@reference_tag(editor)
+export DMENU='{{ .user.programs.dmenu }}' #@reference_tag(dmenu)
+export DMENU_GUI='{{ .user.programs.dmenuGUI }}' #@reference_tag(dmenu_gui)
 export LANG='en_US.UTF-8'
 export LESSHISTSIZE=0
 export LESSHISTFILE=/dev/null
-export MANPAGER='nvim +Man!'
+export MANPAGER='{{ .user.programs.editor }} +Man!'
 
 #@reference_tag(xdg_dir)
 export XDG_CACHE_HOME="${HOME}/.cache"
@@ -26,8 +26,10 @@ export XKB_DEFAULT_LAYOUT='cn'
 #export XKB_DEFAULT_VARIANT=''
 
 export XCURSOR_PATH="${XCURSOR_PATH}:/usr/share/icons:${HOME}/.icons:${XDG_DATA_HOME}/icons"
-export XCURSUR_SIZE='28'
-export XCURSOR_THEME='GoogleDot-White' #@reference_tag(cursor_theme)
+export XCURSOR_SIZE='{{ .user.device.cursorSize }}'
+export XCURSOR_THEME='{{ .user.themes.cursor }}' #@reference_tag(cursor_theme)
+export GTK_THEME='{{ .user.themes.gtk }}'
+export ICON_THEME='{{ .user.themes.icon }}'
 
 export PASSWORD_STORE_CLIP_TIME=15 #@reference_tag(pass)
 export PASSWORD_STORE_GENERATED_LENGTH=32
