@@ -29,8 +29,8 @@ When one commit would be too large or mixed, propose or create a list of convent
 Use this format when proposing a split:
 
 ```text
-- refactor(config): nest service settings under user
-- test(config): verify chezmoi renders service endpoints
+- feat(tmux): enable extended keys
+- fix(sh): remove outdated aliases
 - docs(config): document shared data layout
 ```
 
