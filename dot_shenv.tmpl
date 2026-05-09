@@ -61,9 +61,10 @@ export DOCKER_HOST="unix://${XDG_RUNTIME_DIR}/podman/podman.sock"
 
 append_path "${HOME}/.local/bin"
 append_path "${PYTHONUSERBASE}/bin"
-#append_path "${BUN_INSTALL}/bin"
 append_path "${NPM_PREFIX}/bin"
 append_path "${DOTNET_TOOLS}"
 append_path "${PNPM_HOME}"
 append_path "${PNPM_HOME}/bin"
 append_path "${GOPATH}/bin"
+
+# vim:ft=sh:
